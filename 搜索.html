@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    margin-top: 25px;
+    margin-right: 50px;
+    <style>
+        @font-face {  /*声明字体  引用字体*/
+            font-family: "icomoon";  /*我们自己起名字可以*/
+            src:  url('fonts/icomoon.eot?7kkyc2');
+            src:  url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+            url('fonts/icomoon.woff?7kkyc2') format('woff'),
+            url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            font-style: normal;  /*倾斜字体正常*/
+        }
+        .search_list .ee i{
+            font-family: icomoon;
+            font-style: normal;
+            position: absolute;
+            top: 16px;
+            right: 15px;
+        }
+
+        .search_list{
+            border: 1px solid #e0e0e0;
+            width: 300px;
+            height: 50px;
+            position: relative;
+        }
+        .search_list .ee{
+            line-height:20px;
+            float: right;
+            text-align: center;
+            width:49px;
+            height: 50px;
+            border-left: 1px #e0e0e0 solid;
+            text-decoration: none;
+            position: absolute;
+        }
+        .search_list .ee:hover {
+            background-color: #ff6700;
+        }
+        .search_list a:hover i{
+            color: #fff;
+        }
+        .search_list .e2{
+            position: absolute;
+            height: 20px;
+            background-color: #eeeeee;
+            top: 16px;
+            font-size: 12px;
+            color: #88759c;
+            text-align: center;
+        }
+        .search_list .e2:hover{
+            background-color: #ff6700;
+            color: white;
+        }
+        .search_list .search_box{
+            width:250px;
+            height:300px;
+            /*line-height: 15px;*/
+            border: 1px solid #ff6700;
+            position: absolute;
+            top: 50px;
+            left: -1px;
+            display: none;
+            line-height: 30px;
+
+        }
+        .search_list input:focus{
+            outline: none;
+        }
+        .search_box ul{
+            width: 100%;
+            height: 100%;
+            margin-left: -40px;
+            margin-top: 3px;
+        }
+        .search_box li{
+            width: 100%;
+       /*     line-height: 15px;*/
+            list-style: none;
+
+        }
+        .search_box li a{
+
+            background-image: none;
+           padding-left: 25px;
+            padding-top: 10px;
+            text-decoration: none;
+            font-size: 12px;
+            color: #606060;
+            
+        }
+        .search_box li:hover{
+            background-color: #fafafa;
+             width: 100%;
+        }
+    </style>
+    <script>
+        function inputs() {
+            var oI=document.getElementById('search');
+            var oA=document.getElementById('a');
+            var oDivs=document.getElementById('divs');
+            var oA1=document.getElementById('a1');
+            var oA2=document.getElementById('a2');
+            oI.style.border='1px #ff6700 solid';
+            oA.style.borderLeft='1px #ff6700 solid';
+            oA.style.background='#fff';
+            oA1.style.display='none';
+            oA2.style.display='none';
+            oDivs.style.display='block';
+        }
+        function dis() {
+            var oI=document.getElementById('search');
+            var oDivs=document.getElementById('divs');
+            var oA=document.getElementById('a');
+            oDivs.style.display='none';
+            oI.style.border='1px #e0e0e0 solid';
+            oA.style.borderLeft='1px #e0e0e0 solid';
+            var oA1=document.getElementById('a1');
+            var oA2=document.getElementById('a2');
+            oA1.style.display='block';
+            oA2.style.display='block';
+        }
+    </script>
+</head>
+<body>
+<div id="search" class="search_list" >
+    <input onfocus="inputs()" onblur="dis()" type="text" style="border: 0;height: 48px; width:250px;">
+    <a id="a" class="ee" href="#"><i></i></a>
+     <a id="a1" class="e2" style="width: 40px;right:130px;padding-top: -10px;" >
+         小米9
+     </a>
+    <a id="a2" class="e2" style="width: 60px;right:60px;">
+         小米9 SE</a>
+    <div id="divs" class="search_box">
+        <ul>
+            <li><a href="#">小米 9</a></li>
+            <li><a href="#">Redmi K20 Pro</a></li>
+            <li><a href="#">Redmi K20</a></li>
+            <li><a href="#">Redmi Note 7 Pro</a></li>
+            <li><a href="#">Redmi note 7</a></li>
+            <li><a href="#">小米电视4c</a></li>
+            <li><a href="#">电视32英寸</a></li>
+            <li><a href="#">笔记本pro</a></li>
+            <li><a href="#">小爱音箱</a></li>
+            <li><a href="#">净水器</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
